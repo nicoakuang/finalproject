@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adagio Project: An Intelligent Music Search Engine</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <button id="back-to-top-btn" title="Go to top">↑</button>
+
+    <div id="image-modal" class="modal">
+        <span class="close-btn">×</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <p class="subtitle" data-aos="fade-down" data-aos-delay="200">Final Year Project | Department of Computer Science & Information Engineering, National Kinmen University</p>
+            <h1 data-aos="fade-down">Adagio: An Intelligent Music Search Engine</h1>
+            <p data-aos="fade-down" data-aos-delay="400">A smart platform to recognize, discover, and explore music effortlessly.</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#special-feature">Signature Feature</a>
+            <a href="#features">More Features</a>
+            <a href="#demo">Demo</a>
+            <a href="#visualizer">Visualizer</a>
+            <a href="#results">Results</a>
+            <a href="#team">Team</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="award" data-aos="fade-up">
+            <h2>🏆 Achievement 🏆</h2>
+            <p>We are proud to have won <strong>Third Place</strong> at the 2025 CSIE Department Project Exhibition!</p>
+            <figure>
+                <img src="images/win1.jpg" alt="Team receiving the award" class="award-image">
+                <figcaption class="caption">Cheng, Shih-Kuang (鄭石光) receives the award from Department Head, Prof. Zhao, Yu-Xiang (趙于翔教授).</figcaption>
+            </figure>
+        </section>
+        
+        <section id="about" data-aos="fade-up">
+            <h2>About The Project</h2>
+            <p>This project introduces "Adagio," a system designed to solve the common problem of hearing a song but not knowing its name. Using audio fingerprinting technology, our web-based platform allows users to quickly identify music from various sources. We integrated the AudD and AcrCloud APIs for robust recognition, enhanced with real-time lyrics from Genius and lyrics.ovh. A key innovation is our generative AI-powered search engine, which lets users find songs using natural language, descriptions, or moods.</p>
+        </section>
+
+        <section id="special-feature" data-aos="fade-up">
+            <div class="special-feature-container">
+                <div class="special-feature-text">
+                    <h2>Our Signature Feature: In-Device Recognition</h2>
+                    <p>This is the game-changing tool that sets Adagio apart. Ever heard a song in a <strong>Netflix show, a YouTube video, or a game</strong> on your computer and desperately wanted to know what it was?</p>
+                    <p>With Adagio, you no longer need to grab your phone and struggle to record the audio. Simply play the media on your device, open our website, and start recognition. Adagio listens directly to your computer's audio output and identifies the song for you—seamlessly and instantly.</p>
+                </div>
+                <div class="special-feature-image">
+                    <img src="images/best.png" alt="In-Device Music Recognition in action, identifying a song from a Netflix show.">
+                </div>
+            </div>
+        </section>
+        
+        <section id="features" data-aos="fade-up">
+            <h2>More Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="100">
+                    <h3>Dual-Engine Recognition</h3>
+                    <p>We use both AudD and AcrCloud APIs to maximize recognition accuracy across English, Mandarin, and other languages.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="200">
+                    <h3>AI-Powered Search</h3>
+                    <p>Integrated with ChatGPT, users can search for music with descriptive text like "a happy Taiwanese song" or "a relaxing English melody."</p>
+                </div>
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="300">
+                    <h3>Multi-Source Input</h3>
+                    <p>Recognize music by uploading an audio file, capturing browser audio, or using your device's microphone.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-right" data-aos-delay="400">
+                    <h3>Rich Result Display</h3>
+                    <p>Successful recognition provides song title, artist, album, real-time lyrics, and direct links to YouTube, Spotify, and Apple Music.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="demo" data-aos="fade-up">
+            <h2>Project Demonstrations</h2>
+            <p>See Adagio in action through the videos below, showcasing its core features and the presentation atmosphere.</p>
+            <div class="video-section" data-aos="zoom-in-up">
+                <h3>Demo 1: Core Functionality</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/O9EXdQdeF5U" title="YouTube video player - Demo 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-section" data-aos="zoom-in-up" data-aos-delay="100">
+                <h3>Demo 2: Additional Features / Workflow</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/O9EXdQdeF5U" title="YouTube video player - Demo 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-section" data-aos="zoom-in-up" data-aos-delay="200">
+                <h3>Presentation Atmosphere</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8Jhpgp8j1jQ" title="YouTube video player - Presentation Atmosphere" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="visualizer" data-aos="fade-up">
+            <h2>Live Audio Visualizer</h2>
+            <p>Click the button below and allow microphone access to see a real-time visualization of any sound or music around you. This demonstrates our ability to process live audio streams directly in the browser.</p>
+            <canvas id="audio-canvas"></canvas>
+            <button id="visualizer-btn">Start Visualizer</button>
+        </section>
+        <section id="results" data-aos="fade-up">
+            <h2>System Performance & Results</h2>
+            <p>We conducted tests using 40 popular songs to evaluate our system's performance. The dual-API strategy proved highly effective.</p>
+            <div class="results-container">
+                <div class="result-card" data-aos="flip-up" data-aos-delay="100">
+                    <h3>English Songs</h3>
+                    <div class="percentage">100%</div>
+                    <p>Success Rate</p>
+                </div>
+                <div class="result-card" data-aos="flip-up" data-aos-delay="200">
+                    <h3>Mandarin Songs</h3>
+                    <div class="percentage">90%</div>
+                    <p>Success Rate</p>
+                </div>
+            </div>
+            <h3>Demonstration Screenshots</h3>
+            <p>The following gallery shows screenshots of the Adagio application in use. Click on any image to enlarge.</p>
+            <div class="gallery-grid">
+                <img src="images/result/r1.jpg" alt="Result Screenshot 1" data-aos="zoom-in">
+                <img src="images/result/r2.jpg" alt="Result Screenshot 2" data-aos="zoom-in" data-aos-delay="50">
+                <img src="images/result/r3.jpg" alt="Result Screenshot 3" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/result/r4.jpg" alt="Result Screenshot 4" data-aos="zoom-in" data-aos-delay="150">
+                <img src="images/result/r5.jpg" alt="Result Screenshot 5" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/result/r6.jpg" alt="Result Screenshot 6" data-aos="zoom-in" data-aos-delay="250">
+                <img src="images/result/r7.jpg" alt="Result Screenshot 7" data-aos="zoom-in" data-aos-delay="300">
+            </div>
+        </section>
+        
+        <section id="acknowledgements" data-aos="fade-up">
+            <h2>A Note of Thanks</h2>
+            <p>We would like to express our sincerest gratitude to our project advisor, <strong>Prof. Li, Hsi-Chieh (李錫捷)</strong>. His guidance, invaluable feedback, and unwavering support were instrumental throughout the entire development process of the Adagio project. Thank you for inspiring us and pushing us to achieve our best.</p>
+        </section>
+
+        <section id="team" data-aos="fade-up">
+            <h2>The Team</h2>
+            <img src="images/teamphoto.jpg" alt="The Adagio project team" class="team-photo">
+            <p>This project was brought to life by a dedicated team of students, under the supervision of our advisor.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3>Lin, Yuan-Mao</h3>
+                    <p>Project Lead, System Architecture, Backend & Frontend Development, Audio Processing</p>
+                </div>
+                <div class="team-member">
+                    <h3>Chang, Yu-Wei</h3>
+                    <p>Report Writing, Presentation, Document Integration</p>
+                </div>
+                <div class="team-member">
+                    <h3>NicoAkuang</h3>
+                    <p>Music Data Collection and Processing</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Adagio Project Team | National Kinmen University, Department of CSIE</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

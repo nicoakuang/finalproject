@@ -1,0 +1,401 @@
+/* General Styling */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #4A4E69;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --card-bg: #ffffff;
+    --light-gray: #e9ecef;
+}
+
+html {
+    scroll-behavior: smooth; /* Membuat scroll lebih halus */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: var(--secondary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header .subtitle {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #fff;
+    border-bottom: 2px solid var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 20px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+nav a:hover {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+/* Sections */
+section {
+    background-color: var(--card-bg);
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+section h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.feature-item {
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Results Section */
+.results-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 30px 0;
+    gap: 20px;
+}
+.result-card {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    flex: 1;
+}
+.result-card .percentage {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th, table td {
+    padding: 12px;
+    border: 1px solid var(--light-gray);
+    text-align: left;
+}
+table th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Award Section */
+#award {
+    text-align: center;
+    background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+    color: #333;
+}
+.award-image {
+    max-width: 600px;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.team-member {
+    background: var(--background-color);
+    padding: 15px;
+    border-radius: 5px;
+}
+.team-member h3 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* --- STYLE UNTUK FITUR BARU --- */
+
+/* Figure and Caption for Award Photo */
+figure {
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+.caption {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Video Container & Sections */
+.video-section {
+    margin-bottom: 40px;
+}
+.video-section:last-child {
+    margin-bottom: 0;
+}
+.video-section h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 8px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Results Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer; /* Menandakan gambar bisa diklik */
+}
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Team Photo */
+.team-photo {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Acknowledgements Section */
+#acknowledgements {
+    background-color: #eef6ff;
+    text-align: center;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* Tombol Kembali ke Atas */
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+#back-to-top-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Modal Box untuk Galeri */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.close-btn:hover, .close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+
+/* === TAMBAHKAN STYLE BARU INI DI AKHIR FILE CSS ANDA === */
+
+/* Style untuk Bagian Fitur Spesial */
+#special-feature {
+    background: linear-gradient(135deg, #eef6ff 0%, #d6eaff 100%);
+}
+
+.special-feature-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+}
+
+.special-feature-text {
+    flex: 1; /* Teks mengambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum untuk teks */
+}
+
+.special-feature-text h2 {
+    color: var(--primary-color);
+}
+
+.special-feature-image {
+    flex: 1; /* Gambar mengambil ruang yang tersedia */
+    min-width: 300px; /* Lebar minimum untuk gambar */
+}
+
+.special-feature-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Penyesuaian untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .special-feature-container {
+        flex-direction: column; /* Ubah layout menjadi satu kolom */
+    }
+}
+
+/* === TAMBAHKAN STYLE BARU INI DI AKHIR FILE CSS ANDA === */
+
+/* Style untuk Bagian Visualizer */
+#visualizer {
+    text-align: center;
+}
+
+#audio-canvas {
+    width: 100%;
+    height: 200px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 10px #000;
+}
+
+#visualizer-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#visualizer-btn:hover {
+    background-color: var(--secondary-color);
+}
+#visualizer-btn.active {
+    background-color: #dc3545; /* Warna merah saat aktif */
+}
