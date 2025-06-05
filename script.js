@@ -1,9 +1,6 @@
 // --- Inisialisasi Library Animasi ---
 
 // 1. Animasi Fade In saat Halaman Dimuat
-document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('loaded');
-});
 
 // 2. Inisialisasi Typed.js untuk Animasi Mengetik
 document.addEventListener('DOMContentLoaded', function() {
