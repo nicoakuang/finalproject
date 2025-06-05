@@ -1,3 +1,4 @@
+// Menunggu hingga seluruh struktur HTML dimuat sebelum menjalankan skrip apa pun
 document.addEventListener('DOMContentLoaded', function() {
 
     // 1. Inisialisasi Typed.js untuk Animasi Mengetik
@@ -200,4 +201,4 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleSwitch.addEventListener('change', switchTheme, false);
     }
 
-});
+}); // <-- Kurung penutup untuk DOMContentLoaded yang utama
