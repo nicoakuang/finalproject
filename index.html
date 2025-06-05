@@ -21,9 +21,10 @@
     </div>
 
     <header>
-        <div class="container">
+        <div id="particles-js"></div>
+        <div class="header-content container">
             <p class="subtitle" data-aos="fade-down" data-aos-delay="200">Final Year Project | Department of Computer Science & Information Engineering, National Kinmen University</p>
-            <h1 data-aos="fade-down">Adagio: An Intelligent Music Search Engine</h1>
+            <h1><span id="typed-text"></span></h1>
             <p data-aos="fade-down" data-aos-delay="400">A smart platform to recognize, discover, and explore music effortlessly.</p>
         </div>
     </header>
@@ -120,6 +121,7 @@
             <canvas id="audio-canvas"></canvas>
             <button id="visualizer-btn">Start Visualizer</button>
         </section>
+        
         <section id="results" data-aos="fade-up">
             <h2>System Performance & Results</h2>
             <p>We conducted tests using 40 popular songs to evaluate our system's performance. The dual-API strategy proved highly effective.</p>
@@ -181,7 +183,11 @@
         </div>
     </footer>
 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="script.js"></script>
 </body>
 </html>

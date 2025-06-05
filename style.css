@@ -9,7 +9,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Membuat scroll lebih halus */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,16 +26,34 @@ body {
     padding: 20px;
 }
 
-/* Header */
+/* === HEADER BARU DENGAN PARTIKEL === */
 header {
-    background: var(--secondary-color);
+    position: relative; /* Diperlukan untuk menumpuk partikel di belakang */
+    background-color: var(--secondary-color);
     color: white;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    overflow: hidden; /* Mencegah partikel keluar dari header */
 }
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Posisikan di lapisan paling bawah */
+}
+
+.header-content {
+    position: relative;
+    z-index: 2; /* Posisikan konten di atas partikel */
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5rem;
+    min-height: 80px; /* Memberi ruang untuk teks mengetik */
 }
 header .subtitle {
     font-size: 1rem;
@@ -55,8 +73,9 @@ nav {
 nav .container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Mengurangi gap agar lebih pas */
     padding: 15px 20px;
+    flex-wrap: wrap; /* Agar responsif */
 }
 nav a {
     text-decoration: none;
@@ -178,8 +197,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- STYLE UNTUK FITUR BARU --- */
-
 /* Figure and Caption for Award Photo */
 figure {
     margin: 20px 0 0 0;
@@ -205,7 +222,7 @@ figure {
 }
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
@@ -232,7 +249,7 @@ figure {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    cursor: pointer; /* Menandakan gambar bisa diklik */
+    cursor: pointer;
 }
 .gallery-grid img:hover {
     transform: scale(1.05);
@@ -322,55 +339,42 @@ figure {
     text-decoration: none;
 }
 
-
-/* === TAMBAHKAN STYLE BARU INI DI AKHIR FILE CSS ANDA === */
-
 /* Style untuk Bagian Fitur Spesial */
 #special-feature {
     background: linear-gradient(135deg, #eef6ff 0%, #d6eaff 100%);
 }
-
 .special-feature-container {
     display: flex;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    flex-wrap: wrap;
 }
-
 .special-feature-text {
-    flex: 1; /* Teks mengambil ruang yang tersedia */
-    min-width: 300px; /* Lebar minimum untuk teks */
+    flex: 1;
+    min-width: 300px;
 }
-
 .special-feature-text h2 {
     color: var(--primary-color);
 }
-
 .special-feature-image {
-    flex: 1; /* Gambar mengambil ruang yang tersedia */
-    min-width: 300px; /* Lebar minimum untuk gambar */
+    flex: 1;
+    min-width: 300px;
 }
-
 .special-feature-image img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
-
-/* Penyesuaian untuk layar yang lebih kecil */
 @media (max-width: 768px) {
     .special-feature-container {
-        flex-direction: column; /* Ubah layout menjadi satu kolom */
+        flex-direction: column;
     }
 }
-
-/* === TAMBAHKAN STYLE BARU INI DI AKHIR FILE CSS ANDA === */
 
 /* Style untuk Bagian Visualizer */
 #visualizer {
     text-align: center;
 }
-
 #audio-canvas {
     width: 100%;
     height: 200px;
@@ -380,7 +384,6 @@ figure {
     margin-bottom: 20px;
     box-shadow: inset 0 0 10px #000;
 }
-
 #visualizer-btn {
     padding: 10px 20px;
     font-size: 1rem;
@@ -392,10 +395,9 @@ figure {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 #visualizer-btn:hover {
     background-color: var(--secondary-color);
 }
 #visualizer-btn.active {
-    background-color: #dc3545; /* Warna merah saat aktif */
+    background-color: #dc3545;
 }
