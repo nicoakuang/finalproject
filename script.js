@@ -1,19 +1,24 @@
 // --- Inisialisasi Library Animasi ---
 
-// 1. Inisialisasi Typed.js untuk Animasi Mengetik
+// 1. Animasi Fade In saat Halaman Dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('loaded');
+});
+
+// 2. Inisialisasi Typed.js untuk Animasi Mengetik
 document.addEventListener('DOMContentLoaded', function() {
     new Typed('#typed-text', {
         strings: ['Adagio', 'An Intelligent Music Search Engine'],
-        typeSpeed: 70,  // Kecepatan mengetik
-        backSpeed: 40,  // Kecepatan menghapus
-        backDelay: 1200, // Waktu tunggu sebelum menghapus
-        startDelay: 500,  // Waktu tunggu sebelum mulai
-        loop: true,      // Mengulang animasi
-        smartBackspace: true // Hanya menghapus kata yang berbeda
+        typeSpeed: 70,
+        backSpeed: 40,
+        backDelay: 1200,
+        startDelay: 500,
+        loop: true,
+        smartBackspace: true
     });
 });
 
-// 2. Inisialisasi Particles.js untuk Latar Belakang
+// 3. Inisialisasi Particles.js untuk Latar Belakang
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -95,12 +100,48 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-
-// 3. Inisialisasi AOS (Animate On Scroll) Library
+// 4. Inisialisasi AOS (Animate On Scroll) Library
 AOS.init({
     duration: 800,
     once: true,
     offset: 50,
+});
+
+// 5. Animasi Counter untuk Hasil
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.percentage');
+    const speed = 1500; // Durasi total animasi dalam milidetik
+
+    const animateCounter = (counter) => {
+        const target = +counter.getAttribute('data-count');
+        const updateCount = () => {
+            const current = +counter.innerText.replace('%', '');
+            const increment = target / (speed / 10);
+
+            if (current < target) {
+                counter.innerText = `${Math.ceil(current + increment)}%`;
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = `${target}%`;
+            }
+        };
+        updateCount();
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.5 // Memicu saat 50% elemen terlihat
+    });
+
+    counters.forEach(counter => {
+        observer.observe(counter);
+    });
 });
 
 // --- FUNGSI UNTUK TOMBOL KEMBALI KE ATAS ---
@@ -213,3 +254,52 @@ function stopVisualizer() {
     visualizerButton.textContent = 'Start Visualizer';
     visualizerButton.classList.remove('active');
 }
+
+// --- Logika untuk Dark/Light Mode ---
+const toggleSwitch = document.querySelector('#checkbox');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
+    if (currentTheme === 'dark-mode') {
+        toggleSwitch.checked = true;
+    }
+}
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark-mode');
+    } else {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    }
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+// --- Logika untuk Navigasi Aktif Saat Scroll ---
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').substring(1) === entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, {
+        threshold: 0.5, // Memicu saat 50% section terlihat
+        rootMargin: '-50px 0px -50px 0px' // Sedikit penyesuaian untuk akurasi
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});

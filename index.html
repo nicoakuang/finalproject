@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/me.png">
 </head>
-<body>
+<body class="fade-in">
 
     <button id="back-to-top-btn" title="Go to top">↑</button>
 
@@ -23,8 +24,11 @@
     <header>
         <div id="particles-js"></div>
         <div class="header-content container">
+            <div class="header-top">
+                <img src="images/logo.png" alt="Logo National Kinmen University" class="school-logo">
+                <h1><span id="typed-text"></span></h1>
+            </div>
             <p class="subtitle" data-aos="fade-down" data-aos-delay="200">Final Year Project | Department of Computer Science & Information Engineering, National Kinmen University</p>
-            <h1><span id="typed-text"></span></h1>
             <p data-aos="fade-down" data-aos-delay="400">A smart platform to recognize, discover, and explore music effortlessly.</p>
         </div>
     </header>
@@ -38,6 +42,12 @@
             <a href="#visualizer">Visualizer</a>
             <a href="#results">Results</a>
             <a href="#team">Team</a>
+        </div>
+        <div class="theme-switch-wrapper">
+         <label class="theme-switch" for="checkbox">
+         <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+     </label>
         </div>
     </nav>
 
@@ -92,6 +102,20 @@
             </div>
         </section>
 
+        <section id="tech-stack" data-aos="fade-up">
+            <h2>Technologies We Used</h2>
+            <div class="tech-grid">
+        <div class="tech-item"><img src="images/tech/python.png" alt="Python"><span>Python</span></div>
+        <div class="tech-item"><img src="images/tech/flask.png" alt="Flask"><span>Flask</span></div>
+        <div class="tech-item"><img src="images/tech/javascript.png" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="tech-item"><img src="images/tech/html5.png" alt="HTML5"><span>HTML5</span></div>
+        <div class="tech-item"><img src="images/tech/css3.png" alt="CSS3"><span>CSS3</span></div>
+        <div class="tech-item"><img src="images/tech/audD.png" alt="AudD API"><span>AudD API</span></div>
+        <div class="tech-item"><img src="images/tech/acrcloud.png" alt="AcrCloud API"><span>AcrCloud</span></div>
+        <div class="tech-item"><img src="images/tech/chatgpt.png" alt="ChatGPT API"><span>ChatGPT API</span></div>
+            </div>
+        </section>
+
         <section id="demo" data-aos="fade-up">
             <h2>Project Demonstrations</h2>
             <p>See Adagio in action through the videos below, showcasing its core features and the presentation atmosphere.</p>
@@ -121,6 +145,69 @@
             <canvas id="audio-canvas"></canvas>
             <button id="visualizer-btn">Start Visualizer</button>
         </section>
+
+        <section id="journey" data-aos="fade-up">
+    <h2>Our Project Journey</h2>
+    <p>From a simple idea to an award-winning project, this was our path. Here's a look at the key stages of development for Adagio.</p>
+    <div class="timeline-container">
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+                <h3>Phase 1: Concept & Research</h3>
+                <span class="timeline-date">Semester 1</span>
+                <p>We began by selecting our topic and gathering extensive data on Music Information Retrieval (MIR) and existing audio recognition technologies. [cite: 9]</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-content">
+                <h3>Phase 2: System Design</h3>
+                <span class="timeline-date">Semester 1-2</span>
+                <p>The core architecture was designed, and we researched the best technologies to use, settling on a dual-API strategy for maximum recognition accuracy. [cite: 9]</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+                <h3>Phase 3: Development & Implementation</h3>
+                <span class="timeline-date">Semester 2-3</span>
+                <p>This was the longest phase, involving intense coding for both the front-end interface and the back-end audio processing logic. [cite: 9]</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-content">
+                <h3>Phase 4: Testing & Refinement</h3>
+                <span class="timeline-date">Semester 3-4</span>
+                <p>We rigorously tested the system's accuracy with various music genres and noise levels, fixing bugs and optimizing performance based on the results. [cite: 9]</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-content">
+                <h3>Phase 5: Finalization & Presentation</h3>
+                <span class="timeline-date">Semester 4</span>
+                <p>The final report was written, and we prepared for our public presentation, which culminated in winning an award for our hard work. [cite: 9]</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="devlog" data-aos="fade-up">
+    <h2>Development Log: A Word From The Team</h2>
+    <p>Every project has a story of challenge and triumph. Here are our personal reflections on the journey of creating Adagio.</p>
+    <div class="log-grid">
+        <article class="log-entry" data-aos="fade-up" data-aos-delay="100">
+            <h3>Lin, Yuan-Mao (Project Lead)</h3>
+            <p>"The most difficult part for me as the front-end and back-end developer was fixing the bugs. The process was exhausting, but the feeling of seeing our project finally work brought pure happiness to all of us. I learned that communication is vital, and I'm glad I had such a great project team to work with."</p>
+        </article>
+
+        <article class="log-entry" data-aos="fade-up" data-aos-delay="200">
+            <h3>Chang, Yu-Wei (Documentation Lead)</h3>
+            <p>"Joining the team late and facing member changes presented many challenges. As the sole Taiwanese member, I focused on the complex documentation while my teammates handled the code. During the exhibition, I truly enjoyed explaining our project, especially to one enthusiastic student who tested our system with many niche songs. It proved our diverse team was as strong as any other."</p>
+        </article>
+
+        <article class="log-entry" data-aos="fade-up" data-aos-delay="300">
+            <h3>NicoAkuang (Data Specialist)</h3>
+            <p>"I am incredibly proud of our teamwork. Presenting our two semesters of hard work to the public and seeing their enthusiasm was an unforgettable moment. Winning third place and the 'Most Popular Project' award was a moving validation of our unique solution. I hope one day our Adagio project can become a reality."</p>
+        </article>
+    </div>
+</section>
         
         <section id="results" data-aos="fade-up">
             <h2>System Performance & Results</h2>
@@ -128,12 +215,12 @@
             <div class="results-container">
                 <div class="result-card" data-aos="flip-up" data-aos-delay="100">
                     <h3>English Songs</h3>
-                    <div class="percentage">100%</div>
+                    <div class="percentage" data-count="100">0%</div>
                     <p>Success Rate</p>
                 </div>
                 <div class="result-card" data-aos="flip-up" data-aos-delay="200">
                     <h3>Mandarin Songs</h3>
-                    <div class="percentage">90%</div>
+                    <div class="percentage" data-count="90">0%</div>
                     <p>Success Rate</p>
                 </div>
             </div>
@@ -156,24 +243,48 @@
         </section>
 
         <section id="team" data-aos="fade-up">
-            <h2>The Team</h2>
-            <img src="images/teamphoto.jpg" alt="The Adagio project team" class="team-photo">
-            <p>This project was brought to life by a dedicated team of students, under the supervision of our advisor.</p>
-            <div class="team-grid">
-                <div class="team-member">
+    <h2>The Team</h2>
+    <img src="images/teamphoto.jpg" alt="The Adagio project team" class="team-photo">
+    <p>This project was brought to life by a dedicated team of students, under the supervision of our advisor.</p>
+    <div class="team-grid-flip">
+        <div class="flip-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
                     <h3>Lin, Yuan-Mao</h3>
-                    <p>Project Lead, System Architecture, Backend & Frontend Development, Audio Processing</p>
+                    <p>Project Lead</p>
                 </div>
-                <div class="team-member">
-                    <h3>Chang, Yu-Wei</h3>
-                    <p>Report Writing, Presentation, Document Integration</p>
-                </div>
-                <div class="team-member">
-                    <h3>NicoAkuang</h3>
-                    <p>Music Data Collection and Processing</p>
+                <div class="flip-card-back">
+                    <h4>Main Contribution</h4>
+                    <p>System Architecture, Full-Stack Development (Frontend & Backend), and Audio Processing.</p>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="flip-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>Chang, Yu-Wei</h3>
+                    <p>Documentation Lead</p>
+                </div>
+                <div class="flip-card-back">
+                    <h4>Main Contribution</h4>
+                    <p>Report Writing, Presentation Materials, Document Integration, and Public Relations.</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h3>NicoAkuang</h3>
+                    <p>Data Specialist</p>
+                </div>
+                <div class="flip-card-back">
+                    <h4>Main Contribution</h4>
+                    <p>Music Data Collection & Processing and Inter-team Communication Bridge.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         
     </main>
 
@@ -185,7 +296,6 @@
 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="script.js"></script>
